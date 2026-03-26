@@ -1,0 +1,29 @@
+app = 'n8n-rtomasek'
+primary_region = 'sjc'
+
+[build]
+image = 'n8nio/n8n'
+
+[mounts]
+source = 'n8n_data'
+destination = '/home/node/.n8n'
+
+[http_service]
+internal_port = 5678
+force_https = true
+auto_stop_machines = 'off'
+auto_start_machines = true
+min_machines_running = 1
+processes = ['app']
+
+[env]
+N8N_HOST = 'n8n-rtomasek.fly.dev'
+N8N_PORT = '5678'
+N8N_PROTOCOL = 'https'
+WEBHOOK_URL = 'https://n8n-rtomasek.fly.dev'
+GENERIC_TIMEZONE = 'America/Los_Angeles'
+N8N_BASIC_AUTH_ACTIVE = 'true'
+
+[[vm]]
+memory = '512mb'
+cpus = 1
