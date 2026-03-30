@@ -101,14 +101,14 @@ See the `workflows/` directory for exported workflow JSON files.
 
 ```bash
 # View logs
-fly logs -a personal-n8n
+fly logs -a {unique-ref}
 
 # SSH into the instance
-fly ssh console -a personal-n8n
+fly ssh console -a {unique-ref}
 
 # Check app status
-fly status -a personal-n8n
+fly status -a {unique-ref}
 
 # List volumes
-fly volumes list -a personal-n8n
+fly volumes list -a {unique-ref}
 ```
