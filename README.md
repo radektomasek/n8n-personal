@@ -20,13 +20,13 @@ fly auth login
 ### 2. Create the Fly app
 
 ```bash
-fly apps create personal-n8n
+fly apps create {unique-ref}
 ```
 
 ### 3. Create persistent volume
 
 ```bash
-fly volumes create n8n_data --size 1 --region sjc -a personal-n8n
+fly volumes create n8n_data --size 1 --region sjc -a {unique-ref}
 ```
 
 ### 4. Set secrets
@@ -44,7 +44,7 @@ fly secrets set \
 Generate a Fly.io deploy token:
 
 ```bash
-fly tokens create deploy -x 999999h -a personal-n8n
+fly tokens create deploy -x 999999h -a {unique-ref}
 ```
 
 Add it to your GitHub repo:
